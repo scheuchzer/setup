@@ -17,3 +17,15 @@ package { ['geeqie', 'gimp', 'imagemagick', 'graphviz']:
 package { ['r-cran-rcmdr']:
 	ensure => present
 }
+
+package { ['ruby-full', 'rubygems-integration', 'git-core']:
+	ensure => present
+}
+
+
+exec { 'rhc-install':
+	command      => '/usr/bin/gem install rhc',
+	#path        => '/usr/bin:/usr/sbin:/bin:/usr/local/bin',
+	#refreshonly => true,
+	require => Package['git-core']
+}
