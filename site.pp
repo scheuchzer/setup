@@ -10,7 +10,7 @@ package { ['git', 'subversion', 'mercurial', 'maven']:
 	ensure => present
 }
 
-package { ['geeqie', 'gimp', 'imagemagick', 'graphviz', 'pdftk']:
+package { ['geeqie', 'gimp', 'imagemagick', 'graphviz', 'pdftk','tmux', 'inkscape']:
 	ensure => present
 }
 
