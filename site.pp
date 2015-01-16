@@ -14,7 +14,11 @@ package { ['geeqie', 'gimp', 'imagemagick', 'graphviz', 'pdftk','tmux', 'inkscap
 	ensure => present
 }
 
-package { ['r-cran-rcmdr']:
+package { ['lynx']:
+	ensure => present
+}
+
+package { ['r-cran-rcmdr', 'r-cran-rmysql', 'texlive']:
 	ensure => present
 }
 
