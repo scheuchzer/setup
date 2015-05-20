@@ -26,7 +26,9 @@ package { ['ruby-full', 'rubygems-integration', 'git-core','libs3-2']:
 	ensure => present
 }
 
-
+package { ['nodejs-legacy', 'npm']:
+	ensure => present
+}
 exec { 'rhc-install':
 	command      => '/usr/bin/gem install rhc',
 	#path        => '/usr/bin:/usr/sbin:/bin:/usr/local/bin',
@@ -38,6 +40,11 @@ exec { 'rhc-install':
 #package {['build-essential','libfuse-dev','libcurl4-openssl-dev','libxml2-dev','mime-support','automake','libtool']:
 #	ensure => present
 #}
+
+package { ['awscli']:
+	ensure => present
+}
+
 
 package { ['s3ql']:
 	ensure => absent
