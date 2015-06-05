@@ -26,7 +26,7 @@ package { ['ruby-full', 'rubygems-integration', 'git-core','libs3-2']:
 	ensure => present
 }
 
-package { ['nodejs-legacy', 'npm']:
+package { ['nodejs-legacy', 'npm', 'gcc', 'make', 'build-essential']:
 	ensure => present
 }
 exec { 'rhc-install':
